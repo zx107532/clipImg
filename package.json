@@ -1,0 +1,23 @@
+{
+  "name": "imgclip",
+  "author": {
+    "name": "飞羽寻梦",
+    "email": "zhuxiaozyyx@yeah.net"
+  },
+  "version": "1.0.0",
+  "main": "index.ts",
+  "license": "MIT",
+  "description": "图片裁剪Ts工具",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/"
+  },
+  "keywords": [
+    "clip",
+    "imageClip",
+    "image",
+    "clipImage",
+    "imgClip",
+    "clipImg"
+  ]
+}
