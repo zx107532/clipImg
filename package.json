@@ -5,8 +5,9 @@
     "email": "zhuxiaozyyx@yeah.net"
   },
   "scripts": {
+    "publish": "npm publish"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.ts",
   "license": "MIT",
   "description": "图片裁剪Ts工具",
