@@ -11,4 +11,7 @@
 
     cliData.setSize(width:number, height:number)
 
-    cliData.getClipData(imgSize:number)
+    cliData.getClipData(imgSize:number).then(data => {
+        console.log(data.blob)
+        console.log(data.url)
+    })
