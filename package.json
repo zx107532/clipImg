@@ -1,16 +1,18 @@
 {
-  "name": "imgclip",
+  "name": "@zhuxiaozy/clipimg",
   "author": {
     "name": "飞羽寻梦",
     "email": "zhuxiaozyyx@yeah.net"
   },
-  "version": "1.0.0",
+  "scripts": {
+  },
+  "version": "0.0.1",
   "main": "index.ts",
   "license": "MIT",
   "description": "图片裁剪Ts工具",
   "repository": {
     "type": "git",
-    "url": "git://github.com/"
+    "url": "https://github.com/zx107532/clipImg.git"
   },
   "keywords": [
     "clip",
