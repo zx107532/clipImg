@@ -5,7 +5,7 @@
     "email": "zhuxiaozyyx@yeah.net"
   },
   "scripts": {
-    "publish": "npm publish"
+    "publish": "npm publish --access=public"
   },
   "version": "0.0.2",
   "main": "index.ts",
