@@ -1,8 +1,11 @@
 ### new ClipImg
     import ClipImg from '@zhuxiaozy/clipimg'
 
-    const clipData = new ClipImg(el:Element, (reviewImgUrl) => {
-        console.log(reviewImgUrl)
+    const clipData = new ClipImg({
+        el:Element,
+        reviewCall:(reviewImgUrl) => {
+            console.log(reviewImgUrl)
+         }
     })
 
 
