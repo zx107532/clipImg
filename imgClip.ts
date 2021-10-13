@@ -86,8 +86,8 @@ export default class ClipImg {
             if (this.controllerIsDown) {
                 return;
             }
-            const offsetX = e.pageX - this.clientX(this.el);
-            const offsetY = e.pageY - this.clientY(this.el);
+            const offsetX = e.pageX-this.el.getBoundingClientRect().x;
+            const offsetY = e.pageY - this.el.getBoundingClientRect().y;
             lx = this.imgCtx.x - offsetX;
             ly = this.imgCtx.y - offsetY;
             isDown = true;
@@ -96,9 +96,8 @@ export default class ClipImg {
             if (this.controllerIsDown) {
                 return;
             }
-            const offsetX = e.pageX - this.clientX(this.el);
-            const offsetY = e.pageY - this.clientY(this.el);
-
+            const offsetX = e.pageX-this.el.getBoundingClientRect().x;
+            const offsetY = e.pageY - this.el.getBoundingClientRect().y;
             // 判断鼠标是否指向图片
             if (
                 offsetX > this.imgCtx.x &&
@@ -263,13 +262,15 @@ export default class ClipImg {
                     const x = e.pageX-this.el.getBoundingClientRect().x;
                     // console.log(x, e.pageX-this.el.getBoundingClientRect().x)
                     if (divType === "lt" || divType === "lb") {
-                        const width = this.canvas.width - x * 2;
+                        let width = this.canvas.width - x * 2;
+                        width = width>this.canvas.width?this.canvas.width:width
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
                         this.getClipView();
                     }
                     if (divType === "rt" || divType === "rb") {
-                        const width = this.canvas.width - (this.canvas.width - x) * 2;
+                        let width = this.canvas.width - (this.canvas.width - x) * 2;
+                        width = width>this.canvas.width?this.canvas.width:width
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
                         this.getClipView();
