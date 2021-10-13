@@ -60,6 +60,7 @@ export default class ClipImg {
     }
 
     private init(): void {
+        console.log(2222)
         this.el.style.position = "relative";
         this.el.appendChild(this.canvas);
         this.canvas.width = this.el.clientWidth;
@@ -258,8 +259,9 @@ export default class ClipImg {
             (e: MouseEvent) => {
                 if (this.controllerIsDown) {
                     const parent: HTMLDivElement = div.parentNode as HTMLDivElement;
-                    const x = e.pageX - this.clientX(this.el);
-
+                    // const x = e.pageX - this.clientX(this.el);
+                    const x = e.pageX-this.el.getBoundingClientRect().x;
+                    // console.log(x, e.pageX-this.el.getBoundingClientRect().x)
                     if (divType === "lt" || divType === "lb") {
                         const width = this.canvas.width - x * 2;
                         parent.style.width = width + "px";
