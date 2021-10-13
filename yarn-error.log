@@ -1,0 +1,61 @@
+Arguments: 
+  D:\nodejs\node.exe D:\nodejs\node_modules\yarn\bin\yarn.js add ESLint
+
+PATH: 
+  E:\tsDemo\imgclip\node_modules\.bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;D:\nodejs;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;D:\Microsoft Visual Studio\2019\Enterprise\Common7\Tools\;D:\Microsoft Visual Studio\2019\Enterprise\Common7\Packages\;D:\nvm;D:\nodejs;D:\TortoiseGit\bin;D:\CMake\bin;C:\Users\feiyu\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\feiyu\AppData\Local\Programs\Python\Python39\;C:\Users\feiyu\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;D:\Egret\Egret Wing 3\bin;C:\Program Files (x86)\Egret\Egret UI Editor\resources\app\bin;C:\Users\feiyu\.dotnet\tools;D:\Huawei\DevEco Studio 2.1.0.301\bin;D:\mt.exe;D:\Microsoft Visual Studio\2019\Enterprise\Common7\IDE;C:\Users\feiyu\AppData\Roaming\npm;D:\flutter\sdk\flutter\bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  14.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npmjs.org/ESLint: Not found
+      at Request.params.callback [as _callback] (D:\nvm\v14.16.0\node_modules\yarn\lib\cli.js:66992:18)
+      at Request.self.callback (D:\nvm\v14.16.0\node_modules\yarn\lib\cli.js:140763:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (D:\nvm\v14.16.0\node_modules\yarn\lib\cli.js:141735:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (D:\nvm\v14.16.0\node_modules\yarn\lib\cli.js:141657:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "@zhuxiaozy/clipimg",
+    "author": {
+      "name": "飞羽寻梦",
+      "email": "zhuxiaozyyx@yeah.net"
+    },
+    "scripts": {
+      "publish": "npm publish --access=public"
+    },
+    "version": "0.0.6",
+    "main": "index.ts",
+    "license": "MIT",
+    "description": "图片裁剪Ts工具",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/zx107532/clipImg.git"
+    },
+    "keywords": [
+      "clip",
+      "imageClip",
+      "image",
+      "clipImage",
+      "imgClip",
+      "clipImg"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

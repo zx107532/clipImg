@@ -71,7 +71,7 @@ export default class ClipImg {
 
     private createControlBoxImg(): void {
         if (this.reviewSrc) {
-            this.controllerBox.style.backgroundImage = this.reviewSrc;
+            this.controllerBox.style.backgroundImage = `url('${this.reviewSrc}')`;
             this.controllerBox.style.backgroundSize = '100% 100%';
             this.controllerBox.style.backgroundPosition = '0 0';
         }
@@ -291,14 +291,19 @@ export default class ClipImg {
         canvas.height = height;
         const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
         ctx.putImageData(data, 0, 0);
-        canvas.toBlob((blob) => {
-            const url = URL.createObjectURL(blob);
-            this.reviewSrc = url
-            this.createControlBoxImg()
-            if (this.reviewCall) {
-                this.reviewCall(url);
-            }
-        });
+        this.reviewSrc = canvas.toDataURL('image/jpeg')
+        this.createControlBoxImg()
+        if (this.reviewCall) {
+            this.reviewCall(this.reviewSrc);
+        }
+        // canvas.toBlob((blob) => {
+        //     const url = URL.createObjectURL(blob);
+        //     this.reviewSrc = url
+        //     this.createControlBoxImg()
+        //     if (this.reviewCall) {
+        //         this.reviewCall(url);
+        //     }
+        // });
     }
 
     /**
