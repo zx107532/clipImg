@@ -27,6 +27,7 @@ export default class ClipImg {
     private readonly controllerBox: HTMLDivElement;
     private controllerIsDown: boolean;
     private readonly reviewCall;
+    private reviewSrc: string;
     constructor(config: Config) {
         this.controllerIsDown = false;
         this.el = config.el;
@@ -64,6 +65,15 @@ export default class ClipImg {
         this.canvas.height = this.el.clientHeight;
         this.getEvent();
         this.createControlBox();
+        this.createControlBoxImg()
+    }
+
+    private createControlBoxImg(): void {
+        if (this.reviewSrc) {
+            this.controllerBox.style.backgroundImage = this.reviewSrc;
+            this.controllerBox.style.backgroundSize = '100% 100%';
+            this.controllerBox.style.backgroundPosition = '0 0';
+        }
     }
 
     private getEvent(): void {
@@ -282,6 +292,8 @@ export default class ClipImg {
         ctx.putImageData(data, 0, 0);
         canvas.toBlob((blob) => {
             const url = URL.createObjectURL(blob);
+            this.reviewSrc = url
+            this.createControlBoxImg()
             if (this.reviewCall) {
                 this.reviewCall(url);
             }
