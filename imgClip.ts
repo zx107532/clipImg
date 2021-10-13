@@ -29,6 +29,7 @@ export default class ClipImg {
     private readonly reviewCall;
     private reviewSrc: string;
     constructor(config: Config) {
+        this.reviewSrc = ''
         this.controllerIsDown = false;
         this.el = config.el;
         this.reviewCall = config.reviewCall;
