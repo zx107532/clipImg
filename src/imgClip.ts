@@ -1,11 +1,11 @@
 
-import Mouse from "./mouse";
+import Mouse from "./mouse.js";
 
 
 interface ClipData {
     url: string;
     blob: Blob;
-}
+}``
 interface Config {
     el: HTMLDivElement;
     reviewCall?: (url: string) => void;
@@ -445,3 +445,6 @@ export default class ClipImg {
         return y;
     }
 }
+
+// @ts-ignore
+window['ClipImg'] = ClipImg

@@ -1,5 +1,6 @@
 {
   "name": "@zhuxiaozy/clipimg",
+  "title": "ClipImg",
   "author": {
     "name": "飞羽寻梦",
     "email": "zhuxiaozyyx@yeah.net"
@@ -8,8 +9,9 @@
     "publish": "npm publish --access=public",
     "build": "tsc"
   },
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "license": "MIT",
   "description": "图片裁剪Ts工具",
   "repository": {
@@ -25,6 +27,14 @@
     "clipImg"
   ],
   "dependencies": {
-    "eslint": "6.7.2"
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-loader": "8.2.2",
+    "eslint": "6.7.2",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0"
   }
 }
