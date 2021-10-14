@@ -1,5 +1,7 @@
-// @ts-ignore
-import Mouse from "./mouse.ts";
+
+import Mouse from "./mouse";
+
+
 interface ClipData {
     url: string;
     blob: Blob;

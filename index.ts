@@ -1,3 +1,3 @@
 // @ts-ignore
-import ClipImg from "./imgClip.ts";
+import ClipImg from "./imgClip";
 export default ClipImg

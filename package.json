@@ -5,10 +5,11 @@
     "email": "zhuxiaozyyx@yeah.net"
   },
   "scripts": {
-    "publish": "npm publish --access=public"
+    "publish": "npm publish --access=public",
+    "build": "tsc"
   },
-  "version": "0.0.11",
-  "main": "index.ts",
+  "version": "0.0.13",
+  "main": "dist/index.js",
   "license": "MIT",
   "description": "图片裁剪Ts工具",
   "repository": {

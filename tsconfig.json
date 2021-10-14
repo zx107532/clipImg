@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "declaration": true,
     "target": "ESNext",
-    "sourceMap": true
+    "sourceMap": false,
+    "outDir": "./dist",
+    "strict": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "./dist"
   ]
 }
