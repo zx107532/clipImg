@@ -266,21 +266,25 @@ export default class ClipImg {
                     if (divType === "lt" || divType === "lb") {
                         let width = this.canvas.width - x * 2;
                         width = width>this.canvas.width?this.canvas.width:width
-                        if (width/n>this.canvas.width) {
-                            width = this.canvas.width
-                        }
                         width = width<100?100:width
+                        if (width/n>this.canvas.height) {
+                            parent.style.width = this.canvas.height*n + "px";
+                            parent.style.height = this.canvas.height + "px";
+                            return
+                        }
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
                         this.getClipView();
                     }
                     if (divType === "rt" || divType === "rb") {
                         let width = this.canvas.width - (this.canvas.width - x) * 2;
-                        width = width>this.canvas.width?this.canvas.width:width
-                        if (width/n>this.canvas.width) {
-                            width = this.canvas.width
-                        }
+                        width = width>this.canvas.width?this.canvas.width:width;
                         width = width<100?100:width
+                        if (width/n>this.canvas.height) {
+                            parent.style.width = this.canvas.height*n + "px";
+                            parent.style.height = this.canvas.height + "px";
+                            return
+                        }
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
                         this.getClipView();
