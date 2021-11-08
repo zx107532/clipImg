@@ -266,7 +266,9 @@ export default class ClipImg {
                     if (divType === "lt" || divType === "lb") {
                         let width = this.canvas.width - x * 2;
                         width = width>this.canvas.width?this.canvas.width:width
-                        console.log(width)
+                        if (width/n>this.canvas.width) {
+                            width = this.canvas.width
+                        }
                         width = width<100?100:width
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
@@ -275,6 +277,9 @@ export default class ClipImg {
                     if (divType === "rt" || divType === "rb") {
                         let width = this.canvas.width - (this.canvas.width - x) * 2;
                         width = width>this.canvas.width?this.canvas.width:width
+                        if (width/n>this.canvas.width) {
+                            width = this.canvas.width
+                        }
                         width = width<100?100:width
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
