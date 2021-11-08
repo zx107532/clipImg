@@ -63,7 +63,6 @@ export default class ClipImg {
     }
 
     private init(): void {
-        console.log(2222)
         this.el.style.position = "relative";
         this.el.appendChild(this.canvas);
         this.canvas.width = this.el.clientWidth;
@@ -267,6 +266,8 @@ export default class ClipImg {
                     if (divType === "lt" || divType === "lb") {
                         let width = this.canvas.width - x * 2;
                         width = width>this.canvas.width?this.canvas.width:width
+                        console.log(width)
+                        width = width<100?100:width
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
                         this.getClipView();
@@ -274,6 +275,7 @@ export default class ClipImg {
                     if (divType === "rt" || divType === "rb") {
                         let width = this.canvas.width - (this.canvas.width - x) * 2;
                         width = width>this.canvas.width?this.canvas.width:width
+                        width = width<100?100:width
                         parent.style.width = width + "px";
                         parent.style.height = width / n + "px";
                         this.getClipView();
@@ -283,6 +285,10 @@ export default class ClipImg {
             true
         );
         return div;
+    }
+
+    private computeSize(width:number) {
+
     }
 
     private getClipView() {
