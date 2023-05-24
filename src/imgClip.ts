@@ -301,6 +301,9 @@ export default class ClipImg {
     }
 
     private getClipView() {
+        if(!this.context) {
+            return
+        }
         const opt = this.controllerBox.getBoundingClientRect();
         const x = this.controllerBox.offsetLeft - opt.width / 2;
         const y = this.controllerBox.offsetTop - opt.height / 2;
